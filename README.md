@@ -10,6 +10,4 @@
 <ul>
 <li>HTML</li>
 <li>CSS</li>
-<li></li>
-<li></li>
 </ul>
