@@ -1,0 +1,47 @@
+@use "vars";
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: vars.$bg-ivory-white;
+	padding: 1rem 2rem;
+
+	.logo {
+		height: 60px;
+	}
+
+	.menu__list {
+		display: flex;
+		align-items: center;
+
+		.menu__item {
+			list-style: none;
+			padding: 0 1rem 0 1rem;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			a {
+				color: vars.$bg-light-grey;
+				margin-right: 1.25rem;
+				text-decoration: none;
+				text-transform: lowercase;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&#active {
+					color: vars.$bg-dark-grey;
+					font-weight: bold;
+				}
+
+				&:hover {
+					border-bottom: 2px solid vars.$bg-dark-grey;
+				}
+			}
+		}
+	}
+}

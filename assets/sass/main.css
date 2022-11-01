@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Blessings Through Raindrops";
+  src: url("/assets/custom_font.ttf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}/*# sourceMappingURL=main.css.map */
