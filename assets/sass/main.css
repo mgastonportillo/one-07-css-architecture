@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 @font-face {
   font-family: "Blessings Through Raindrops";
   src: url("/assets/custom_font.ttf");
@@ -11,6 +13,7 @@
 }
 .header .logo {
   height: 60px;
+  padding-bottom: 4px;
 }
 .header .menu__list {
   display: flex;
@@ -38,6 +41,82 @@
 }
 .header .menu__list .menu__item a:hover {
   border-bottom: 2px solid #333333;
+}
+
+.banner {
+  position: relative;
+  background: #6cbd45;
+  transition: all 0.3s ease-in-out;
+  height: 350px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  outline: 5px solid #6cbd45;
+}
+.banner .banner__image {
+  width: 100vw;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+  filter: contrast(0.8) hue-rotate(10deg);
+}
+.banner .banner__image::after {
+  content: "";
+  width: 100%;
+  background: #6cbd45;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vw;
+}
+.banner .banner__image::after:hover {
+  background-size: 0 100vw;
+}
+.banner .banner__title {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0, -50%);
+  padding: 0 2rem;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+}
+
+.motto {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(90deg, #f5fff1, white, #f5fff1);
+}
+.motto .motto__title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #6cbd45;
+          text-decoration-color: #6cbd45;
+}
+.motto p {
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+.motto .motto__highlighted {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.motto .motto__highlighted > em {
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.motto .motto__image {
+  height: 220px;
+  padding-top: 2rem;
 }
 
 * {
