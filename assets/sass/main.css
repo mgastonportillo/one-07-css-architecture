@@ -135,27 +135,40 @@
   }
 }
 .recipes {
+  padding: 3rem 3rem 4rem 3rem;
+  background: #fcffef;
+}
+.recipes .recipes__title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #6cbd45;
+          text-decoration-color: #6cbd45;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.recipes .recipe__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
-  padding: 4rem 3rem;
   margin: 0 auto;
   max-width: 1160px;
-  background: #f9f9f9;
+  gap: 3rem;
 }
-.recipes .recipe {
+.recipes .recipe__wrapper .recipe {
   width: 320px;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
-.recipes .recipe .recipe__image {
+.recipes .recipe__wrapper .recipe .recipe__image {
   max-width: 320px;
   height: auto;
 }
-.recipes .recipe .recipe__content {
+.recipes .recipe__wrapper .recipe .recipe__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -164,13 +177,13 @@
   height: 160px;
   padding: 1rem;
 }
-.recipes .recipe .recipe__title {
+.recipes .recipe__wrapper .recipe .recipe__title {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: capitalize;
 }
-.recipes .recipe .recipe__button {
+.recipes .recipe__wrapper .recipe .recipe__button {
   margin: 0.2rem 0;
   padding: 0.5rem 1rem;
   background: #6cbd45;
@@ -182,28 +195,34 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.recipes .recipe .recipe__button:hover {
+.recipes .recipe__wrapper .recipe .recipe__button:hover {
   background: #559b38;
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 421px) {
   .recipes {
-    padding: 4rem 0;
+    padding: 3rem 0;
     margin: 0 auto;
-    background: white;
   }
-  .recipes .recipe {
-    width: 100%;
+  .recipes .recipe__wrapper {
+    padding: auto 0;
   }
-  .recipes .recipe .recipe__image {
+  .recipes .recipe__wrapper .recipe {
+    width: 90%;
+  }
+  .recipes .recipe__wrapper .recipe .recipe__image {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
     max-width: 100%;
   }
+  .recipes .recipe__wrapper .recipe .recipe__content {
+    min-height: 180px;
+    padding: 1.5rem;
+  }
 }
 .about__us {
-  background: orange;
+  background: #f9f9f9;
 }
 
 .footer {
