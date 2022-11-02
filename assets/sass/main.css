@@ -89,7 +89,7 @@
 .motto {
   text-align: center;
   padding: 3rem;
-  background: linear-gradient(90deg, #f5fff1, white, #f5fff1);
+  background: #f9f9f9;
 }
 .motto .motto__title {
   font-size: 2rem;
@@ -221,12 +221,53 @@
     padding: 1.5rem;
   }
 }
-.about__us {
+.about-us {
   background: #f9f9f9;
+  text-align: center;
+  padding: 3rem;
+}
+.about-us .about-us__title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #6cbd45;
+          text-decoration-color: #6cbd45;
+}
+.about-us .about-us__text {
+  color: #595959;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+.about-us .people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about-us .people .person .person__image {
+  margin-top: 2rem;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  transition: all 0.2s ease-in-out;
+  outline: 2px solid transparent;
+}
+.about-us .people .person .person__image:hover {
+  outline: 2px solid #6cbd45;
+}
+.about-us .people .person .person__title {
+  padding: 0.5rem;
+}
+.about-us .people .person .person__role {
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 .footer {
-  background: red;
+  height: 350px;
+  background: #6cbd45;
 }
 
 * {
