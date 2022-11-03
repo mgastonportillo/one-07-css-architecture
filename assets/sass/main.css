@@ -418,7 +418,9 @@
   filter: brightness(0.2);
 }
 .footer .footer__content .gale .gale__text {
-  font-size: 1rem !important;
+  line-height: 2.5;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
