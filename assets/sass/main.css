@@ -309,7 +309,7 @@
   }
 }
 .about-us {
-  background: #f9f9f9;
+  background: linear-gradient(90deg, #f5fff1, white, #f5fff1);
   text-align: center;
   padding: 3rem;
 }
@@ -356,8 +356,68 @@
 }
 
 .footer {
+  position: relative;
+}
+.footer .footer__image {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
   height: 600px;
-  background: #6cbd45;
+}
+.footer .footer__content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  color: #333333;
+}
+.footer .footer__content .footer__title {
+  padding-top: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #6cbd45;
+          text-decoration-color: #6cbd45;
+}
+.footer .footer__content address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .footer__content address .footer__text {
+  color: #808080;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+}
+.footer .footer__content address .footer__email {
+  font-size: 2rem;
+}
+.footer .footer__content address .footer__email:link {
+  color: #6cbd45;
+}
+.footer .footer__content address .footer__email:hover {
+  color: #559b38;
+}
+.footer .footer__content .gale {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+.footer .footer__content .gale .gale__logo {
+  max-width: 100px;
+  filter: brightness(0.2);
+}
+.footer .footer__content .gale .gale__text {
+  font-size: 1rem;
+  padding: 1rem;
 }
 
 * {
