@@ -9,29 +9,61 @@
 	</head>
 
 	<body>
-		<header class="header">
-			<img
-				class="logo"
-				src="assets/img/logo.png"
-				alt="Logo Healthy Food, Healthy You"
-			/>
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<a class="menu__link" href="#" id="active">Home</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Recipes</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">About Us</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Contact</a>
-					</li>
-				</ul>
+		<div class="header__wrapper">
+			<header class="header" id="header">
+				<img
+					class="logo"
+					src="assets/img/logo.png"
+					alt="Logo Healthy Food, Healthy You"
+				/>
+
+				<nav id="inner__menu">
+					<div id="menu__icon" onclick="toggleMenu()">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+					<div class="menu__list">
+						<div class="menu__item">
+							<a class="menu__link" href="#header" id="active">Home</a>
+						</div>
+
+						<div class="menu__item">
+							<a class="menu__link" href="#recipes">Recipes</a>
+						</div>
+
+						<div class="menu__item">
+							<a class="menu__link" href="#about-us">About Us</a>
+						</div>
+
+						<div class="menu__item">
+							<a class="menu__link" href="#footer">Contact</a>
+						</div>
+					</ul>
+				</nav>
+			</header>
+
+			<nav id="outer__menu">
+				<div class="menu__list">
+					<div class="menu__item">
+						<a class="menu__link" href="#header" id="active">Home</a>
+					</div>
+
+					<div class="menu__item">
+						<a class="menu__link" href="#recipes">Recipes</a>
+					</div>
+
+					<div class="menu__item">
+						<a class="menu__link" href="#about-us">About Us</a>
+					</div>
+
+					<div class="menu__item">
+						<a class="menu__link" href="#footer">Contact</a>
+					</div>
+				</div>
 			</nav>
-		</header>
+		</div>
 
 		<main>
 			<section class="banner">
@@ -55,7 +87,7 @@
 				/>
 			</section>
 
-			<section class="recipes">
+			<section class="recipes" id="recipes">
 				<h2 class="recipes__title">Featured recipes</h2>
 
 				<div class="recipe__wrapper">
@@ -68,7 +100,7 @@
 						<div class="recipe__content">
 							<h4 class="recipe__title">Avocado Bowl</h4>
 							<p class="recipe__description">
-								A fresh recipe, ideal to get that vitamin boost during you
+								A fresh recipe, ideal to get that vitamin boost from your
 								breakfast.
 							</p>
 							<button class="recipe__button">Check recipe</button>
@@ -83,7 +115,8 @@
 						<div class="recipe__content">
 							<h4 class="recipe__title">Kiwi Salad</h4>
 							<p class="recipe__description">
-								Who doesn't like kiwi? It's delicious and it's full of vitamins!
+								Who doesn't like kiwi? It's delicious and full of vitamins and
+								enzymes!
 							</p>
 							<button class="recipe__button">Check recipe</button>
 						</div>
@@ -111,8 +144,8 @@
 						<div class="recipe__content">
 							<h4 class="recipe__title">Julienned Peppers</h4>
 							<p class="recipe__description">
-								Fresh, slightly spicy, crunchy texture and amazing colors. Will
-								you miss it?
+								Fresh, slightly spicy, crunchy texture and amazing colors. Not
+								to be missed!
 							</p>
 							<button class="recipe__button">Check recipe</button>
 						</div>
@@ -141,7 +174,7 @@
 						<div class="recipe__content">
 							<h4 class="recipe__title">Honey-roast Beetroot</h4>
 							<p class="recipe__description">
-								Lovely hot or cold,. Even better a day later when flavours have
+								Lovely hot or cold. Even better a day later when flavours have
 								developed.
 							</p>
 							<button class="recipe__button">Check recipe</button>
@@ -150,7 +183,7 @@
 				</div>
 			</section>
 
-			<section class="about-us">
+			<section class="about-us" id="about-us">
 				<h2 class="about-us__title">About Us</h2>
 
 				<p class="about-us__text">
@@ -191,6 +224,8 @@
 			</section>
 		</main>
 
-		<footer class="footer"></footer>
+		<footer class="footer" id="footer"></footer>
+
+		<script src="assets/js/hamburger-menu.js"></script>
 	</body>
 </html>

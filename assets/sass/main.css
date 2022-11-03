@@ -21,7 +21,7 @@
 }
 .header .menu__list .menu__item {
   list-style: none;
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
 }
 .header .menu__list .menu__item:last-child {
   padding-right: 0;
@@ -43,6 +43,93 @@
   border-bottom: 2px solid #333333;
 }
 
+#outer__menu {
+  display: none;
+  height: 4rem;
+}
+#outer__menu .menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0.5rem;
+  width: 100vw;
+}
+#outer__menu .menu__list .menu__item {
+  list-style: none;
+}
+#outer__menu .menu__list .menu__item .menu__link {
+  color: #808080;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#outer__menu .menu__list .menu__item .menu__link#active {
+  color: #333333;
+  font-weight: bold;
+}
+#outer__menu .menu__list .menu__item .menu__link:hover {
+  border-bottom: 2px solid #333333;
+}
+
+@media screen and (max-width: 600px) {
+  #inner__menu .menu__list {
+    position: absolute;
+    display: none;
+  }
+  #outer__menu {
+    position: relative;
+    display: none;
+  }
+  #outer__menu.open {
+    display: flex;
+  }
+}
+#menu__icon {
+  display: none;
+  width: 40px;
+  height: 35px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#menu__icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #333333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+#menu__icon span:nth-child(1) {
+  top: 0px;
+}
+#menu__icon span:nth-child(2) {
+  top: 15px;
+}
+#menu__icon span:nth-child(3) {
+  top: 30px;
+}
+#menu__icon.open span:nth-child(1) {
+  top: 15px;
+  transform: rotate(135deg);
+}
+#menu__icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+#menu__icon.open span:nth-child(3) {
+  top: 15px;
+  transform: rotate(-135deg);
+}
+
+@media screen and (max-width: 600px) {
+  #menu__icon {
+    display: block;
+  }
+}
 .banner {
   position: relative;
   background: #6cbd45;
@@ -274,6 +361,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
