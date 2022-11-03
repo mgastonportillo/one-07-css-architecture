@@ -330,9 +330,12 @@
 .about-us .people {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
+}
+.about-us .people .person {
+  padding-bottom: 1rem;
 }
 .about-us .people .person .person__image {
   margin-top: 2rem;
@@ -353,7 +356,7 @@
 }
 
 .footer {
-  height: 350px;
+  height: 600px;
   background: #6cbd45;
 }
 
